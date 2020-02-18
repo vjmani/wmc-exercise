@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Test Exercise</title>
+    <link href="main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar ">
+            <div class="container justify-content-between">
+                <div class="brand-logo">
+                    <img src="./src/assests/logo.png" alt="Logo">
+                </div>
+                <div class="header-btn">
+                    <button class="btn main-btn">
+                        Trade
+                    </button>
+                    <button class="btn main-btn">
+                        Transfer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 account-details">
+                    <div class="account-details-header">
+                        <div>
+                            <h4>Accounts</h4>
+                        </div>
+                        <div>
+                            <button class="btn secondary-btn" data-toggle="modal" data-target="#accounFormModal">Add Account</button>
+                            <button class="btn secondary-btn">Refresh</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive account-details-table">
+                        <table class="table table-hover" id="account-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Market Value</th>
+                                    <th scope="col">Cash</th>
+                                    <th scope="col">Legend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td id="total-market-value"></td>
+                                    <td id="total-cash"></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="account-chart">
+                        <h5>All Accounts</h5>
+                        <img src="./src/assests/chart.png" alt="Account Chart">
+                        <a class="account-chart-link" href="#">Click on an account to view positions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="accounFormModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addAccountModal">Add Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger account-form-error" role="alert">
+                           Please fill all the details
+                        </div>
+                        <form id="add-account-form">
+                            <div class="form-group">
+                                <label for="accountName">Name</label>
+                                <input type="text" class="form-control" placeholder="Enter Name" id="accountName">
+                            </div>
+                            <div class="form-group">
+                                <label for="marketValue">Market Value</label>
+                                <input type="text" class="form-control" id="marketValue" placeholder="Market Value">
+                            </div>
+                            <div class="form-group">
+                                <label for="cash">Cash</label>
+                                <input type="text" class="form-control" id="cash" placeholder="Cash">
+                            </div>
+                            <button type="button" class="btn secondary-btn">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <p class="footer-text">This is a demo application. All data is fictitious.</p>
+        </div>
+    </footer>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

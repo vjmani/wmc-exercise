@@ -1,0 +1,12 @@
+
+footer {
+    background-color: $strong-grey;
+    flex-shrink: none;
+    height: 60px;
+
+    .footer-text {
+        color: $white;
+        font-size: 14px;
+        font-style: italic;
+    }
+}

@@ -1,0 +1,63 @@
+
+.main {
+    flex: 1 0 auto;
+    padding: 10px 0;  
+
+    .account-chart {
+        background-color: $light-grey;
+        padding: 10px;
+        margin-top: 60px;
+
+        &-link {
+            font-style: italic;
+            color: $dark-grey;
+        }
+    }
+
+    .account-details {
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        &-table {
+            .table {
+                padding-bottom: 20px;
+                
+                thead {
+                    background-color: $strong-grey;
+                    color: $white;
+                }
+
+                tbody {
+                    font-size: 14px;
+
+                    .chart-legend {
+                        width: 40px;
+                        height: 22px;
+                        display: block;
+                    }
+                }
+
+                tfoot {
+                    font-weight: bold;
+                    font-size: 16px;
+
+                    tr {
+                        td {
+                            padding-top: 0;
+                            padding-bottom: 0;
+                            border-top: 2px solid $strong-grey;
+                        }
+                    }
+                }
+            }
+        }
+
+    } 
+    
+    .account-form-error {
+        display: none;
+    }
+}
