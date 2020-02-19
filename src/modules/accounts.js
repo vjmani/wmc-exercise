@@ -5,10 +5,6 @@ const getAccounts = () => {
     return ACCOUNT_DATA;
 };
 
-const addAccount = (account) => {
-
-};
-
 const loadTableData = (accountData) => {
     let row = '';
     accountData.map((data) => {
@@ -19,7 +15,9 @@ const loadTableData = (accountData) => {
         </tr>`;
 
         row += tempRow;
-    });    return row;
+    });
+    
+    return row;
 }
 
 const getTotalToDisplay = (accountData, valueKey) => {
@@ -35,4 +33,4 @@ const isValidField = (formField) => {
     return fieldValue || false;
 }
 
-export { getAccounts, addAccount, loadTableData, getTotalToDisplay, isValidField };
+export { getAccounts, loadTableData, getTotalToDisplay, isValidField };
